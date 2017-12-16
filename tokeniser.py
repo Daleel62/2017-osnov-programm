@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 
 #Class 3
-text = "example of text";
-tokens=text.split( )
-print(tokens)
+import sys
+for line in sys.stdin.readlines ():
+	token_id = 1
+	tokens=line.split( )
+	print(tokens)
 
-l=[]
-for i in range(len(tokens)):
-    l1=['-']*8
-    l2=[i,tokens[i]]
-    l.append(l2+l1 )
-print(l)
+	# sent_id = 3 
+	# text = y 40 C. w. 	
+	print ("# text = "+line)
+	for i in range(len(tokens)):
+		l1=['_']*8
+		print('%d\t%s' % (token_id, tokens[i]) +'\t'.join(l1))
+		token_id += 1
+#nano tokeniser.py
+#head corpus/wiki.txt
 
-l[0][4]="NOUN";
-l[1][4]="ADV";
-l[2][4]="NOUN";
-
-print(l)
 
