@@ -17,7 +17,7 @@ for line in sys.stdin.readlines ():
 	print ("# sent_id = %d" % sent_id)
 	for i in range(len(tokens)):
 		l1=['_']*8
-		print('%d\t%s' % (token_id, tokens[i]) +'\t'.join(l1))
+		print('%d\t%s\t' % (token_id, tokens[i]) +'\t'.join(l1))
 		token_id += 1
 	sent_id+=1
 	print()
