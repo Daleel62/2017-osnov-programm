@@ -33,4 +33,9 @@ table = {
 }
 
 for line in sys.stdin.readlines():
-	print(line)
+	if line [0]=='#':
+		print(line)
+		continue
+
+	row = line.split('\t')
+	print(row)
